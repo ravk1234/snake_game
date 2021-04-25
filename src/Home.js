@@ -5,7 +5,7 @@ import Food from "./Food";
 import App from "./App";
 
 function Home() {
-   const [state, setState] = useState('start')
+   let [state, setState] = useState('start')
 
    function openGame() {
     setState('startGame')
@@ -18,7 +18,7 @@ function Home() {
         state ='start' && (
         <>
         <h1 className="heading"> Snake Game</h1>
-        <button className="para" onClick={this.openGame}>Start Game</button>
+        <button className="para" onClick={openGame}>Start Game</button>
         <button className="para">About</button>
         <button className="para">Instructions</button>
         </>)
@@ -31,6 +31,7 @@ function Home() {
 
     </div>
   );
+
 
 
 }
